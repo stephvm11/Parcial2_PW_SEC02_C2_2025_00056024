@@ -13,7 +13,7 @@ app.get("/cuentas", (req, res) => {
       results = clients.filter((account) => account._id === id);
     } else if (client) {
       const queryLower = client.toLowerCase();
-      results = clients.filter((account) => account.client === queryLower);
+      results = clients.filter((account) => account.client.toLowerCase() === queryLower);
     } else if (gender) {
       const queryLower = gender.toLowerCase();
       results = clients.filter(
