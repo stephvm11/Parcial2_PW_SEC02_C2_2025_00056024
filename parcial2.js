@@ -49,7 +49,7 @@ app.get("/cuentas", (req, res) => {
 });
 
 // endpoint 2.
-app.get("/cuentas/:id", (req, res) => {
+app.get("/cuenta/:id", (req, res) => {
   const { id } = req.params;
   const client = clients.find((b) => b._id === id);
   const response = {
